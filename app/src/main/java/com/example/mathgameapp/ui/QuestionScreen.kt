@@ -12,7 +12,6 @@ import androidx.navigation.NavController
 fun QuestionScreen(navController: NavController, gameViewModel: GameViewModel = viewModel()) {
     val uiState = gameViewModel.uiState
     var userAnswer by remember { mutableStateOf("") }
-    var isInputValid by remember { mutableStateOf(true) }
 
     // Automatically navigate if the game is finished
     LaunchedEffect(uiState.isGameFinished) {
